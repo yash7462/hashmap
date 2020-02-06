@@ -10,6 +10,8 @@ public class HashMapExample {
         HashMap<Integer,String> map = new HashMap<>();
 
         display(map);
+
+        //Add data into hashmap
         map.put(10,"yash");
         map.put(20,"jay");
         map.put(50,"vishal");
@@ -24,14 +26,18 @@ public class HashMapExample {
         System.out.println("key set : "+map.keySet());
         System.out.println("values set : "+map.values());
         System.out.println("size is : "+map.size());
+
+        //copy one hashmap data to another
         HashMap<Integer,String> hmap = new HashMap<Integer,String>();
         hmap.putAll(map);
         hmap.remove(90);
         System.out.println("new map is : "+hmap);
-
+        //clear first hashmap
         map.clear();
         display(map);
     }
+
+    //function to print data
     public static void display(Map<Integer,String> map){
         if (map.isEmpty()){
             System.out.println("map is empty");
